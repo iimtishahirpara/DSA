@@ -1,6 +1,8 @@
 //Find Second Largest Number in Array
 
-const Num=[20,22,50,78,80,90];
+//Num[i]!= LargeNum --> if largest value are same 2 times like 90
+
+const Num=[89,89,22,50,78,80,90,90];
 
 function SecondLargest(Num)
 {
@@ -13,6 +15,10 @@ function SecondLargest(Num)
         {
             SecondLarg=LargeNum;
             LargeNum= Num[i];
+        }
+        else if(SecondLarg < Num[i]  && Num[i]!= LargeNum)
+        {
+            SecondLarg= Num[i];
         }
     }
     return SecondLarg;
