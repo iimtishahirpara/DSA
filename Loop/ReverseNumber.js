@@ -14,7 +14,6 @@ function IsReverse(n)
         cNum= Math.trunc(cNum/10);
     }
     return rev;
-
 }
 
 console.log(IsReverse(number))
