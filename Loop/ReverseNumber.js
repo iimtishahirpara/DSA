@@ -1,6 +1,6 @@
 // Write a Program for Reverse Integer Number
 
-let number = 234;
+let number = -24;
 
 function IsReverse(n)
 {
@@ -13,6 +13,11 @@ function IsReverse(n)
         rev= (10*rev) + rem; 
         cNum= Math.trunc(cNum/10);
     }
+
+    //32 bit integar range then return 0
+    let limit=Math.pow(2,31);
+    if(rev < -limit || rev > limit ) return 0;
+
     return rev;
 }
 
